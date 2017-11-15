@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="//amp.azure.net/libs/amp/2.1.3/skins/amp-default/azuremediaplayer.min.css" rel="stylesheet">
+<script src="//amp.azure.net/libs/amp/2.1.3/azuremediaplayer.min.js"></script>
+<script>
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+//document.getElementById("defaultOpen").click();
+
+
+/*var myOptions = {
+	"nativeControlsForTouch": false,
+	controls: true,
+	autoplay: true,
+	width: "1200",
+	height: "600",
+}
+myPlayer = amp("azuremediaplayer", myOptions);
+myPlayer.src([
+        {
+                "src": "http://yougomediaservice.streaming.mediaservices.windows.net/a59f71c1-546a-46e0-a9b4-a60a21bfce1c/a1cf0f24-3fa2-4dc8-add8-d3249e15b9dd.ism/manifest",
+                "type": "application/vnd.ms-sstr+xml"
+        }
+]);*/
+
+
+</script>
+<style>
+body {font-family: "Calibri", sans-serif;}
+
+div.container {
+    width: 100%;
+    border: 1px solid #707070;
+}
+
+header {
+    padding: 0px;
+    color: black;
+    background-color: none;
+	/*border-bottom:1px solid #707070;*/
+    clear: left;
+    text-align: center;
+}
+ footer {
+    padding: 1em;
+    color: black;
+    background-color: none;
+	border-top:1px solid #707070;
+    clear: left;
+    text-align: center;
+}
+
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+	
+}
+
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+div.tab button.active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+	height:705px;
+	
+}
+.maindiv{
+	width:100%; 
+	height:780px; 
+	border:1px solid #707070;
+}
+.leftdiv{
+	width:70%; 
+	height:400px; 
+	float:left;  
+	border:none; 
+	margin:5px;
+}
+.rightdiv{
+	width:28%; 
+	height:765px; 
+	float:right; 
+	border:1px solid #707070; 
+	margin:6px;
+	position:relative;
+}
+
+#form_box {
+    position: absolute;
+    height: 35px;
+    left: 20px; 
+	bottom:0;
+	right:0;
+}
+
+#textbox {
+    border: solid 1px #CCC;
+    height: 24px;
+    width: 200px;
+    font-size: 15px;
+    color: #999;
+    padding-left: 5px;
+}
+
+#submit {
+    position: relative;
+    border: solid 1px #707070;
+    height: 25px;
+    width: 100px;
+    color: #000;
+	background-color:#979797
+}
+div iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+}
+</style>
+</head>
+<body>
+
+<div>
+
+<header>
+	<img src="yougo-logo.png" align="left" style="position: relative; "/>
+   <h2>Streaming and Messaging POC</h2>
+</header>
+
+<div class="maindiv">
+	
+    <div class="leftdiv">
+        <!--div class="tab">
+  			<button class="tablinks" onclick="openTab(event, 'Video')" id="defaultOpen">Video 1</button>
+  			<button class="tablinks" onclick="openTab(event, 'Video2')">Video 2</button>
+		</div-->
+
+		<div id="Video">
+  			
+            <!--video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video-->
+            <video id="vid1" class="azuremediaplayer amp-default-skin amp-big-play-centered" autoplay controls width="880" height="550" poster="poster.jpg" data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false}'>
+    <source src="http://yougomediaservice.streaming.mediaservices.windows.net/a59f71c1-546a-46e0-a9b4-a60a21bfce1c/a1cf0f24-3fa2-4dc8-add8-d3249e15b9dd.ism/manifest" type="application/vnd.ms-sstr+xml" />
+    <p class="amp-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
+    </p>
+</video>
+		</div>
+
+		<!--div id="Video2" class="tabcontent">
+  			<!--iframe  width="100%" height="344" src="https://www.youtube.com/embed/a9u0B1F650U" frameborder="0" allowfullscreen></iframe-->
+  			 
+		</div-->
+    </div>
+    
+    <div class="rightdiv">
+    	<iframe id="frame" src="http://yougochatpoc.azurewebsites.net" frameborder="0"></iframe>
+            <!--div id="form_box">
+            <form id="subscribe_form" action="subscribe" method="post">
+               
+                <input id="textbox" type="text" name="" value="" />
+                <input id="submit" type="submit" value="SEND" />
+            </form>
+            </div-->
+    </div>
+</div>
+
+
+<!--footer>Footer</footer-->
+
+</div>
+
+
+</body>
+</html>
