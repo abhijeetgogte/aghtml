@@ -66,7 +66,7 @@ div.tab {
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-	
+
 }
 
 div.tab button {
@@ -94,25 +94,25 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 	height:705px;
-	
+
 }
 .maindiv{
-	width:100%; 
-	height:780px; 
+	width:100%;
+	height:780px;
 	border:1px solid #707070;
 }
 .leftdiv{
-	width:70%; 
-	height:400px; 
-	float:left;  
-	border:none; 
+	width:70%;
+	height:400px;
+	float:left;
+	border:none;
 	margin:5px;
 }
 .rightdiv{
-	width:28%; 
-	height:765px; 
-	float:right; 
-	border:1px solid #707070; 
+	width:28%;
+	height:765px;
+	float:right;
+	border:1px solid #707070;
 	margin:6px;
 	position:relative;
 }
@@ -120,7 +120,7 @@ div.tab button.active {
 #form_box {
     position: absolute;
     height: 35px;
-    left: 20px; 
+    left: 20px;
 	bottom:0;
 	right:0;
 }
@@ -165,7 +165,7 @@ div iframe {
 </header>
 
 <div class="maindiv">
-	
+
     <div class="leftdiv">
         <!--div class="tab">
   			<button class="tablinks" onclick="openTab(event, 'Video')" id="defaultOpen">Video 1</button>
@@ -173,11 +173,11 @@ div iframe {
 		</div-->
 
 		<div id="Video">
-  			
+
             <!--video id="azuremediaplayer" class="azuremediaplayer amp-default-skin amp-big-play-centered" tabindex="0"></video
             "techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], -->
             <video id="vid1" class="azuremediaplayer amp-default-skin amp-big-play-centered" autoplay controls data-setup='{"techOrder": ["azureHtml5JS", "flashSS", "html5FairPlayHLS","silverlightSS", "html5"], "nativeControlsForTouch": false, "fluid": true}'>
-    <source src="http://yougomediaservice.streaming.mediaservices.windows.net/8771b9d9-0bda-4b93-a477-8c915411be1f/3b517810-e640-473d-93a6-d847bccf8044.ism/manifest&format=smooth" type="application/vnd.ms-sstr+xml" />
+    <source src="http://yougomediaservice.streaming.mediaservices.windows.net/aee93b95-2754-4820-9161-89ebaef4f823/ccbc929b-a954-4196-8b17-c7b3d0a8e611.ism/manifest&format=smooth" type="application/vnd.ms-sstr+xml" />
     <p class="amp-no-js">
         To view this video please enable JavaScript, and consider upgrading to a web browser that supports HTML5 video
     </p>
@@ -186,15 +186,15 @@ div iframe {
 
 		<!--div id="Video2" class="tabcontent">
   			<!--iframe  width="100%" height="344" src="https://www.youtube.com/embed/a9u0B1F650U" frameborder="0" allowfullscreen></iframe-->
-  			 
+
 		</div-->
     </div>
-    
+
     <div class="rightdiv">
     	<iframe id="frame" src="http://yougochatpoc.azurewebsites.net" frameborder="0"></iframe>
             <!--div id="form_box">
             <form id="subscribe_form" action="subscribe" method="post">
-               
+
                 <input id="textbox" type="text" name="" value="" />
                 <input id="submit" type="submit" value="SEND" />
             </form>
